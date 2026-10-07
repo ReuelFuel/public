@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me — Reuel Fuel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        h1, h2, h3 { text-align: center; text-transform: uppercase; }
+
+        :root {
+            --ink: #1a1a18;
+            --ink-muted: #6b6b66;
+            --ink-faint: #a8a89f;
+            --surface: #ffffff;
+            --surface-card: #ffffff;
+            --border: rgba(26,26,24,0.1);
+            --accent: #1D9E75;
+            --accent-light: #E1F5EE;
+            --accent-dark: #085041;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            background: var(--surface);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            backdrop-filter: blur(12px);
+            padding: 0 1.25rem;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0.25rem;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--ink-muted);
+            text-decoration: none;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .page-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 5rem 2rem 3rem;
+        }
+
+        .page-header-photo-wrap {
+            float: right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 0 0 1rem 2rem;
+        }
+
+        .page-header-photo {
+            width: clamp(240px, 80vw, 340px);
+            aspect-ratio: 1 / 1;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .page-header-photo-caption {
+            font-family: 'Poppins', sans serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--ink);
+            text-align: center;
+        }
+
+        .page-header-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+            .page-header-photo-wrap {
+                float: none;
+                margin: 0 auto 1.5rem;
+            }
+            .page-header-photo {
+                width: clamp(260px, 85vw, 340px);
+            }
+        }
+
+        .page-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: 1.25rem;
+        }
+
+        .page-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            margin-bottom: 1.25rem;
+        }
+
+        .page-header h1 em {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .page-intro {
+            font-size: 1.05rem;
+            color: var(--ink-muted);
+            max-width: 580px;
+            line-height: 1.7;
+        }
+
+        .content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 5rem 2rem 0;
+        }
+
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            padding: 4rem 0;
+            align-items: start;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--ink-faint);
+            padding-top: 0.35rem;
+        }
+
+        .content-body h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--ink);
+            margin-bottom: 1rem;
+        }
+
+        .content-body p {
+            color: var(--ink-muted);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-body p:last-child { margin-bottom: 0; }
+
+        .content-section-centered {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+        }
+
+        .content-section-centered .section-label {
+            padding-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .content-section-centered .content-body {
+            max-width: 680px;
+        }
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+
+        .interest-item {
+            background: var(--surface-card);
+            padding: 1.25rem;
+        }
+
+        .interest-icon {
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .interest-title {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--ink);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .interest-desc {
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.55rem 1.1rem;
+            border-radius: 8px;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .contact-btn-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .contact-btn-primary:hover {
+            background: var(--accent-dark);
+        }
+
+        .contact-btn-secondary {
+            background: var(--surface-card);
+            color: var(--ink-muted);
+            border: 1px solid var(--border);
+        }
+
+        .contact-btn-secondary:hover {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        footer {
+            padding: 2.5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-name {
+            font-family:  'Poppins', sans-serif;
+            font-size: 1rem;
+            color: var(--ink);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.1rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            color: var(--ink-muted);
+            text-decoration: none;
+        }
+
+        .footer-links a svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        @media (max-width: 1100px) {
+            .page-header { padding: 3rem 1.25rem 2rem; }
+            .page-header-photo { width: clamp(240px, 80vw, 340px); }
+            .content-section { grid-template-columns: 1fr; gap: 1rem; padding: 2.5rem 0; }
+            .interest-grid { grid-template-columns: 1fr; }
+            .content { padding: 3rem 1.25rem 0; }
+            nav { padding: 0 1.25rem; }
+            footer { padding: 2rem 1.25rem; flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                background: #ffffff;
+                backdrop-filter: none;
+            }
+            .nav-inner {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                height: auto;
+                padding: 0.75rem 0;
+                row-gap: 0.5rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.35rem 0.4rem;
+            }
+            .nav-links a {
+                font-size: 0.8rem;
+                padding: 0.35rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Reuel Fuel</a>
+            <ul class="nav-links">
+                <li><a href="spiritual-food.html">Spiritual Food</a></li>
+                <li><a href="physical-food.html">Physical Food</a></li>
+                <li><a href="about.html" class="active">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <p class="page-intro">'For we through the Spirit wait for the hope of righteousness by faith. For in Jesus Christ neither circumcision availeth any thing, nor uncircumcision; but faith which worketh by love. 'Galatians 5:5-6</p>
+    </div>
+ 
+    <div class="content">
+
+        <div class="content-section content-section-centered">
+            <div class="content-body">
+                <div class="page-header-photo-wrap">
+                    <div class="page-header-photo">
+                        <img src="images/portrait.jpg" alt="Yohance">
+                    </div>
+                </div>
+                <p>I'm Yohance. I grew up in a Christian home and always believed in God, yet it was only the recent couple of years that I transitioned from being an admirer to wanting to follow the footsteps of Christ. I'm also interested in physical health, studying cancer biology and immunology at university, and spending much of my time reading nutrition books, trying to improve my diet.</p>
+                <p>I'm very interested in understanding the association between physical health and spiritual health, and how spiritual problems can manifest physically. In Luke chapter 13, after healing a woman who had a &lsquo;spirit of infirmity&rsquo; which prevented her from being able to straighten her back, Jesus said, &ldquo;ought not this woman, being a daughter of Abraham, whom Satan hath bound, lo, these eighteen years, be loosed from this bond on the sabbath day?&rdquo; (Luke 13:16). This is a clear indicator that physical sicknesses are often a manifestation of spiritual problems. I'm keen to discover this connection.</p>
+                <p>If you're interested in deepening your walk with Christ, learning of the interactions between spiritual and physical health, or just interested in nutrition, you can find things here to interest you. It was my own personal challenges with health that revealed just how tangible the spiritual world is and made me want to study in more detail. My prayer is that this page will inspire you to walk in Jesus&rsquo;s footsteps.</p>
+                <p>Email: Spiritualfood@reuelfuel.site</p>
+                <p>Instagram: @reuel_fuel</p> 
+                <p>Youtube: @ReuelFuel</p>           
+                    </div>
+        </div>
+
+<!--        <div class="content-section">
+            <span class="section-label">Interests</span>
+            <div class="content-body">
+                <h2>What I think about</h2>
+                <div class="interest-grid">
+                    <div class="interest-item">
+                        <span class="interest-icon">🧬</span>
+                        <span class="interest-title">Cancer biology</span>
+                        <span class="interest-desc">Metabolic reprogramming, tumour microenvironments, and the Warburg effect</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">⚗️</span>
+                        <span class="interest-title">Nutritional biochemistry</span>
+                        <span class="interest-desc">How specific nutrients influence cellular signalling and gene expression</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">✝️</span>
+                        <span class="interest-title">Scripture & theology</span>
+                        <span class="interest-desc">What the Bible says about the body, health, and how we live</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">📖</span>
+                        <span class="interest-title">Writing & thinking</span>
+                        <span class="interest-desc">Using this blog to develop ideas that don't yet have a home elsewhere</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+
+    </div>
+
+    <footer>
+        <span class="footer-name">Reuel Fuel</span>
+        <ul class="footer-links">
+            <li><a href="mailto:spiritualfood@reuelfuel.site" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></li>
+            <li><a href="https://www.instagram.com/reuel_fuel?igsh=N3k2dm92ZzY5ZnJn&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a href="https://youtube.com/@reuelfuel?si=3wHM7sIx-K2yQduB" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.3l5 2.7-5 2.7V9.3z" fill="currentColor" stroke="none"/></svg></a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

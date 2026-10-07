@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    ================================================================
+    HOW TO USE THIS TEMPLATE
+    ================================================================
+    1. Save a copy of this file with a short name, e.g.:
+         posts/magnesium-and-atp.html
+    2. Fill in the fields marked EDIT below.
+    3. Write your post inside <article class="post-body">.
+    4. Add a matching entry to blog.html.
+    ================================================================
+    -->
+    <title>The Trend in Carnivore Diets Is Increasing — Reuel Fuel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --ink: #1a1a18;
+            --ink-muted: #6b6b66;
+            --ink-faint: #a8a89f;
+            --surface: #ffffff;
+            --surface-card: #ffffff;
+            --border: rgba(26,26,24,0.1);
+            --accent: #1D9E75;           /* EDIT: #534AB7 for spiritual posts, #1D9E75 for physical */
+            --accent-light: #E1F5EE;     /* EDIT: #EEEDFE for spiritual, #E1F5EE for physical */
+            --accent-dark: #085041;      /* EDIT: #26215C for spiritual, #085041 for physical */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            background: var(--surface);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            backdrop-filter: blur(12px);
+            padding: 0 1.25rem;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0.25rem;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--ink-muted);
+            text-decoration: none;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .nav-links a:hover {
+            background: var(--border);
+            color: var(--ink);
+        }        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            backdrop-filter: blur(12px);
+            padding: 0 1.25rem;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0.25rem;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--ink-muted);
+            text-decoration: none;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .nav-links a:hover {
+            background: var(--border);
+            color: var(--ink);
+        }
+
+        /* POST HEADER */
+        .post-header {
+            max-width: 680px;
+            margin: 0 auto;
+            font-weight: 700;
+            padding: 5rem 2rem 3rem;
+        }
+
+        .post-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: none;
+            margin-bottom: 1.25rem;
+            text-decoration: none;
+        }
+
+        .post-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-byline {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .byline-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .byline-text {
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+        }
+
+        .byline-text strong {
+            color: var(--ink);
+            font-weight: 500;
+        }
+
+        /* POST BODY */
+        article.post-body {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        /* All the typographic elements you can use inside your post */
+
+        .post-body p {
+            color: var(--ink-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--ink);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .post-body h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--ink);
+            margin: 2rem 0 0.75rem;
+        }
+
+        /* Pull quote / scripture block */
+
+        .post-body blockquote p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #085041;
+            background: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-body blockquote cite {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #1D9E75;
+            letter-spacing: 0.04em;
+            font-style: normal;
+        }
+
+        /* Callout box — for key points */
+
+
+        .post-body .callout-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .post-body .callout p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Horizontal rule / section break */
+        .post-body hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 3rem 0;
+        }
+
+        /* POST FOOTER — next/prev navigation */
+        .post-nav {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .post-nav a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--ink-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.15s;
+        }
+
+        .post-nav a:hover { color: var(--accent); }
+
+        .post-nav .back { margin-right: auto; }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: var(--ink);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.1rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            color: var(--ink-muted);
+            text-decoration: none;
+        }
+
+        .footer-links a svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        @media (max-width: 640px) {
+            nav { padding: 0 1.25rem; }
+            .post-header { padding: 3rem 1.25rem 2rem; }
+            article.post-body { padding: 2rem 1.25rem 4rem; }
+            .post-nav { padding: 2rem 1.25rem; }
+            footer { padding: 2rem 1.25rem; flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                background: #ffffff;
+                backdrop-filter: none;
+            }
+            .nav-inner {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                height: auto;
+                padding: 0.75rem 0;
+                row-gap: 0.5rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.35rem 0.4rem;
+            }
+            .nav-links a {
+                font-size: 0.8rem;
+                padding: 0.35rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Reuel Fuel</a>
+            <ul class="nav-links">
+                <li><a href="../spiritual-food.html">Spiritual Food</a></li>
+                <li><a href="../physical-food.html">Physical Food</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-header">
+        <a href="../blog.html" class="post-tag">Physical food</a>
+
+        <h1>Meat</h1>
+
+        <div class="post-byline">
+            <span class="byline-text">
+                <strong>Yohance</strong> &nbsp;·&nbsp; 10 Aug 2026 &nbsp;·&nbsp; 5 min read
+            </span>
+        </div>
+    </div>
+
+    <!-- ================================================================
+         YOUR POST CONTENT GOES HERE
+         Available elements:
+           <p>              — paragraph
+           <h2>             — section heading
+           <h3>             — sub-heading
+           <blockquote>     — pull quote or scripture (add <cite> inside)
+           <div class="callout"> — key point box (add <span class="callout-label"> and <p> inside)
+           <hr>             — section break
+    ================================================================ -->
+    <article class="post-body">
+
+        <p>The trend in carnivore diets is increasing. Some people seem to be eating steak for breakfast, lunch, and dinner. Meat can be a source of nutrients and protein; it is very filling and low on carbohydrates. But not all is sunshine and rainbows — meat consumption can be detrimental to health.</p>
+
+        <h2>The hidden risks of meat</h2>
+
+        <p>Certain meats are a source of parasites and dangerous bacteria, such as pork and beef, respectively. In rare cases, no microbial agent is needed at all — the structure of the protein itself is infectious, as with prions, misfolded proteins which cause neurodegenerative diseases. This is why it's important that raw meat be stored at the bottom of the fridge and cooked to high temperatures — chicken, for example, should be cooked to a temperature above 75°C (temperatures vary for each meat).</p>
+
+        <p>Meat also contains other harmful molecules such as hormones, waste products, and toxins from the animal, which become concentrated as you move up the food chain — a process called bioaccumulation. This depends on what the animal itself eats; scavenger animals, which consume waste in the environment, tend to carry more of these harmful products. Fat-soluble toxins accumulate in the fatty parts of the animal and are detoxified by the liver, making them much harder to clear than water-soluble toxins.</p>
+
+        <blockquote>
+            <p>"And God said unto them... Every moving thing that liveth shall be meat for you; even as the green herb have I given you all things."</p>
+            <cite>Genesis 9:1-3</cite>
+        </blockquote>
+
+        <p>It was only after the flood (Genesis 9), when there were no plants, that God allowed meat consumption. But under these circumstances, He gave strict regulations on what animals could be eaten. All mammals must be herbivores and have cloven hooves; fish must have fins and scales; birds cannot be scavengers or birds of prey (Leviticus 11).</p>
+
+        <img src="images/leviticus-11-food-chain.jpg" alt="Leviticus 11: Animals and the food chain — allowed and forbidden land animals, water creatures, birds, and insects" style="width:100%; border-radius:10px; margin: 0.5rem 0 2rem; display:block;">
+
+        <p>Therefore, in the guidance given by God, you can see the wisdom in only allowing certain animals to be eaten. With a plant-based diet you can get all that you need without anything more</p>
+
+        <div class="callout">
+            <span class="callout-label">Worth noting</span>
+            <p>Beyond dietary law, the instruction to remove mould from walls and to wash hands — written around 1500 BC — is another striking example of the practical wisdom found in this ancient text.</p>
+        </div>
+
+        <hr>
+
+    </article>
+
+    <div class="post-nav">
+        <a href="../physical-food.html" class="back">← All posts</a>
+        <!-- EDIT: update these links when you have neighbouring posts -->
+        <!-- <a href="next-post.html">Next post →</a> -->
+    </div>
+
+    <footer>
+        <span class="footer-name">Reuel Fuel</span>
+        <ul class="footer-links">
+            <li><a href="mailto:spiritualfood@reuelfuel.site" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></li>
+            <li><a href="https://www.instagram.com/reuel_fuel?igsh=N3k2dm92ZzY5ZnJn&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a href="https://youtube.com/@reuelfuel?si=3wHM7sIx-K2yQduB" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.3l5 2.7-5 2.7V9.3z" fill="currentColor" stroke="none"/></svg></a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
